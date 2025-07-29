@@ -1,7 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
+  "theme": "willow",
   "name": "Taag",
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
   "colors": {
     "primary": "#5046FF",
     "light": "#5E55FB",
@@ -41,8 +45,7 @@
             "group": "Pricing rule",
             "pages": [
               "guides/v1/rule/new",
-              "guides/v1/rule/edit",
-              "guides/v1/rule/delete"
+              "guides/v1/rule/edit"
             ]
           },
           {
