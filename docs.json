@@ -18,10 +18,24 @@
         "tab": "API Docs",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Documentation",
             "pages": [
               "api-reference/introduction",
-              "api-reference/authorisation"
+              "api-reference/authorization"
+            ]
+          },
+          {
+            "group": "Pricing",
+            "pages": [
+              "api-reference/v1/pricing/getPrice"
+            ]
+          },
+          {
+            "group": "Subscribers",
+            "pages": [
+              "api-reference/v1/subscribers/getSubscribers",
+              "api-reference/v1/subscribers/updateEmail",
+              "api-reference/v1/subscribers/unsubscribe"
             ]
           }
         ]
