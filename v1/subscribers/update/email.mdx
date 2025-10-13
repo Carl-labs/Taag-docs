@@ -1,0 +1,53 @@
+---
+title: 'Update Email'
+openapi: 'POST /subscribers/update/email'
+---
+
+Whenever any of your subscribers change their email, use this endpoint to update it into Taag (we use emails to send invoices, receipts, etc)
+
+```method: POST
+https://api.taag.cc/v1/subscribers/update/email
+```
+
+## Authorization
+
+All you need is to include your **secret key** as a value of **authorization** in the header and hit the endpoint above.
+
+```bash
+Authorization: taag_sk_mode_xxxxxxxxx
+```
+
+<ParamField path="Authorization" type="string" required>
+  Use the secret key that matches the mode you are in TEST or LIVE
+</ParamField>
+
+## Request body
+
+```bash
+{
+	"subscriberId": "f3a5e5afda82acd2569415e869193d9d",
+	"newEmail": "singlemoms@gmail.com"
+}
+```
+
+<ResponseField name="subscriberId" type="string" required>
+    Use the subscriberId you received from us on [get subscribers](./getSubscribers) endpoint or the subscriber you received from our webhook on the subscriber creation
+</ResponseField>
+<ResponseField name="newEmail" type="email" required>
+    The new email of the subscriber 
+</ResponseField>
+
+## Response
+
+When successful you will receive this response:
+
+```bash
+    {
+        "message": "Subscriber email updated successfully",
+        "mode": "TEST",
+        "subscriber": {
+            "email": "singlemoms@gmail.com",
+            "subscriberId": "f3a5e5afda82acd2569415e869193d9d"
+        }
+    }
+```

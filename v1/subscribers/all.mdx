@@ -1,0 +1,44 @@
+---
+title: 'Get subscribers'
+openapi: 'GET /subscribers/all'
+---
+
+Use this endpoint to get all your users that subscribed to your service.
+
+```method: GET
+https://api.taag.cc/v1/subscribers/all
+```
+
+## Authorization
+All you need is to include your **secret key** as a value of **authorization** in the header and hit the endpoint above.
+
+```bash
+Authorization: taag_sk_mode_xxxxxxxxx
+```
+<ParamField path="Authorization" type="string" required>
+  Use the secret key that matches the mode you are in TEST or LIVE
+</ParamField>
+
+## Response
+
+In the response to your request you will get an object containing an array of all your subscribers each as an object.
+
+```bash
+{
+	"mode": "TEST",
+	"subscribers": [
+		{
+			"email": "stevejobs@apple.com",
+			"firstName": "Steve",
+			"lastName": "Jobs",
+			"subscriberId": "f3a5e5afda82acd2569415e869193d9d",
+			"status": "UNSUBSCRIBED",
+			"countryCode": "US",
+			"createdAt": "2025-08-26T18:45:40.567Z"
+		}
+	],
+	"count": 1
+}
+```
+
+<Note> Keep the **subscriberId** because you might need it to [update email](../subscribers/updateEmail) or [unsubscribe](../subscribers/unsubscribe).</Note>

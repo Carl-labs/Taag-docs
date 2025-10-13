@@ -1,86 +1,70 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "maple",
   "name": "Taag",
+  "logo": {
+    "light": "/logo/Logo.svg",
+    "dark": "/logo/Logo.svg",
+    "href": "https://taag.cc"
+  },
   "appearance": {
     "default": "light",
     "strict": true
   },
   "colors": {
     "primary": "#5046FF",
-    "light": "#5E55FB",
-    "dark": "#3C35B5"
+    "light": "#FF0000",
+    "dark": "#FF0000"
   },
   "favicon": "./taagWhiteLogo.png",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
-        "defaultGroup": "Take a tour",
-        "defaultPage": "./guides/introduction.md",
-        "groups": [
-          {
-            "group": "Take a tour",
-            "pages": [
-              "./guides/introduction"
-            ]
-          },
-          {
-            "group": "Project",
-            "pages": [
-              "guides/v1/project/new",
-              "guides/v1/project/analytics",
-              "guides/v1/project/subscribers",
-              "guides/v1/project/settings"
-            ]
-          },
-          {
-            "group": "Pricing plan",
-            "pages": [
-              "guides/v1/plan/new",
-              "guides/v1/plan/check"
-            ]
-          },
-          {
-            "group": "Pricing rule",
-            "pages": [
-              "guides/v1/rule/new",
-              "guides/v1/rule/edit"
-            ]
-          },
-          {
-            "group": "Integration",
-            "pages": [
-              "guides/v1/integration/connect"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "API Docs",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Get started",
             "pages": [
-              "api-reference/introduction"
+              "introduction",
+              "authorization",
+              "checkout",
+              "testCards",
+              "redirectUrl",
+              "webhook"
             ]
           },
           {
-            "group": "Pricing",
+            "group": "Verify",
             "pages": [
-              "api-reference/v1/pricing/get",
-              "api-reference/v1/pricing/verify"
+              "v1/verify/pricing",
+              "v1/verify/euro"
             ]
           },
           {
             "group": "Subscribers",
             "pages": [
-              "api-reference/v1/subscribers/new",
-              "api-reference/v1/subscribers/verify"
+              "v1/subscribers/all",
+              "v1/subscribers/update/email",
+              "v1/subscribers/unsubscribe"
+            ]
+          },
+          {
+            "group": "Plans",
+            "pages": [
+              "v1/plans/all",
+              "v1/plans/create",
+              "v1/plans/archive"
             ]
           }
         ]
       }
+    ]
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "claude"
     ]
   }
 }
